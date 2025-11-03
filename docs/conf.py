@@ -14,5 +14,5 @@ extensions = [
 templates_path = ['_templates']  # optional
 exclude_patterns = []
 
-html_theme = 'sphinx_rtd_theme'  # Recommended for ReadTheDocs
+html_theme = 'alabaster'  # Recommended for ReadTheDocs
 html_static_path = ['_static']   # optional
