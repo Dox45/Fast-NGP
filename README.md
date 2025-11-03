@@ -9,7 +9,7 @@ A clean, pure PyTorch implementation of NVIDIA's **Instant Neural Graphics Primi
 ## Features
 
 ✨ **Pure PyTorch** - No CUDA extensions required, easy to install and modify  
-📦 **Easy Installation** - `pip install pyinstant-ngp`  
+📦 **Easy Installation** - `pip install fast-ngp`  
 🎯 **Modular Design** - Each component usable independently  
 🚀 **Multiple Tasks** - NeRF, SDF, and Gigapixel image support  
 📊 **Visualization Tools** - Built-in rendering and metrics  
@@ -58,7 +58,7 @@ model = FastNGP_NeRF(
         'hidden_dim': 64
     }
 )
-print("✅ Model initialized")
+print(" Model initialized")
 
 # Train
 
@@ -74,7 +74,7 @@ trainer = NeRFTrainer(
 )
 
 trainer.train()
-print("🎉 Training complete!")
+print(" Training complete!")
 
 # Provide a camera pose as a 3x4 matrix (numpy or torch)
 import numpy as np
