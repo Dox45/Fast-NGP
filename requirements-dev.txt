@@ -1,0 +1,20 @@
+# Include base requirements
+-r requirements.txt
+
+# Development tools
+pytest>=7.0.0
+pytest-cov>=3.0.0
+black>=22.0.0
+flake8>=4.0.0
+isort>=5.10.0
+mypy>=0.950
+
+# Documentation
+sphinx>=4.5.0
+sphinx-rtd-theme>=1.0.0
+sphinx-autodoc-typehints>=1.18.0
+
+# Jupyter for examples
+jupyter>=1.0.0
+notebook>=6.4.0
+

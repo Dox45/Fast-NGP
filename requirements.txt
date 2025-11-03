@@ -1,0 +1,14 @@
+# Core dependencies
+torch>=2.0.0
+numpy>=1.21.0
+pillow>=9.0.0
+tqdm>=4.62.0
+matplotlib>=3.5.0
+opencv-python>=4.5.0
+imageio>=2.9.0
+pyyaml>=6.0
+
+# Optional: faster image I/O
+imageio-ffmpeg>=0.4.7
+
+

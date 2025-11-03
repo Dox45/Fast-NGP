@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fast-ngp"
+version = "0.1.0"
+description = "Pure PyTorch implementation of NVIDIA's Instant Neural Graphics Primitives"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Chima Emmanuel", email = "fender54eurois@gmail.com"}
+]
+keywords = ["nerf", "neural-graphics", "3d-reconstruction", "pytorch", "instant-ngp"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+
+dependencies = [
+    "torch>=2.0.0",
+    "numpy>=1.21.0",
+    "pillow>=9.0.0",
+    "tqdm>=4.62.0",
+    "matplotlib>=3.5.0",
+    "opencv-python>=4.5.0",
+    "imageio>=2.9.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=3.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+    "isort>=5.10.0",
+    "mypy>=0.950",
+]
+docs = [
+    "sphinx>=4.5.0",
+    "sphinx-rtd-theme>=1.0.0",
+    "sphinx-autodoc-typehints>=1.18.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Dox45/fast-ngp"
+Documentation = "https://fast-ngp.readthedocs.io"
+Repository = "https://github.com/Dox45/fast-ngp"
+"Bug Tracker" = "https://github.com/Dox45/fast-ngp/issues"
+
+[project.scripts]
+fast-ngp-train = "fast_ngp.cli:train"
+fast-ngp-render = "fast_ngp.cli:render"
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=pyinstant_ngp --cov-report=html --cov-report=term"
+
